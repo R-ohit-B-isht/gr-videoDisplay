@@ -9,3 +9,16 @@ in this package. A quick listing of the details can be found in Python
 after importing by using:
 
     help(videoDisplay)
+
+
+```bash
+
+#stream local file to 1234 tcp port
+ffmpeg -re -i video.mp4 -c:v copy -c:a copy -f mpegts "tcp://localhost:1234?listen"
+
+```
+
+## libs
+```
+mamba install gst-plugins-bad
+```
