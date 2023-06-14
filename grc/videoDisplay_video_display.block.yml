@@ -1,0 +1,47 @@
+id: videoDisplay_video_display
+label: video_display
+category: '[videoDisplay]'
+
+templates:
+  imports: |-
+    from gnuradio import videoDisplay
+    from PyQt5 import Qt
+    import sip
+  make: |-
+        <%
+            win = 'self._%s_win'%id
+        %>\
+        videoDisplay.video_display(${type.size}*${vlen},${file},None)
+        ${win} = sip.wrapinstance(self.${id}.qwidget(), Qt.QWidget)
+        ${gui_hint() % win}
+
+
+parameters:
+-   id: file
+    label: File
+    dtype: file_save
+-   id: type
+    label: Input Type
+    dtype: enum
+    options: [complex, float, int, short, byte]
+    option_attributes:
+        size: [gr.sizeof_gr_complex, gr.sizeof_float, gr.sizeof_int, gr.sizeof_short,
+            gr.sizeof_char]
+    hide: part
+-   id: vlen
+    label: Vector Length
+    dtype: int
+    default: '1'
+    hide: ${ 'part' if vlen == 1 else 'none' }
+-   id: gui_hint
+    label: GUI Hint
+    dtype: gui_hint
+    hide: part
+
+inputs:
+-   domain: stream
+    dtype: ${ type }
+    vlen: ${ vlen }
+
+
+file_format: 1

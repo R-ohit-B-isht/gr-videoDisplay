@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e7a52b4a720eabc8f33ac41b0bf8cf49" kind="dir">
+    <compoundname>bindings</compoundname>
+    <innerdir refid="dir_53e997c3cc6c18f99900b30eb873f5a0">docstrings</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/python/videoDisplay/bindings/"/>
+  </compounddef>
+</doxygen>

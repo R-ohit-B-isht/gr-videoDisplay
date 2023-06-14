@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classvideo__player__signal" kind="class" language="C++" prot="public">
+    <compoundname>video_player_signal</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="video__player_8h" local="no">video_player.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvideo__player__signal_1ac752d0cfbb2c1cf0e26c65816c20770f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>video_player_signal::video_player_signal</definition>
+        <argsstring>()</argsstring>
+        <name>video_player_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="53" column="5" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classvideo__player__signal_1a39bbb0f615bc3f55102f27223314ae7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>video_player_signal::~video_player_signal</definition>
+        <argsstring>()</argsstring>
+        <name>~video_player_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="54" column="5" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="classvideo__player__signal_1a61bcf89918257edad748aef1d6713416" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void video_player_signal::data_send</definition>
+        <argsstring>(QByteArray videoBuffer)</argsstring>
+        <name>data_send</name>
+        <param>
+          <type>QByteArray</type>
+          <declname>videoBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="57" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="1">
+        <label>video_player_signal</label>
+        <link refid="classvideo__player__signal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="1">
+        <label>video_player_signal</label>
+        <link refid="classvideo__player__signal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="48" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="49" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classvideo__player__signal_1a61bcf89918257edad748aef1d6713416" prot="public" virt="non-virtual"><scope>video_player_signal</scope><name>data_send</name></member>
+      <member refid="classvideo__player__signal_1ac752d0cfbb2c1cf0e26c65816c20770f" prot="public" virt="non-virtual"><scope>video_player_signal</scope><name>video_player_signal</name></member>
+      <member refid="classvideo__player__signal_1a39bbb0f615bc3f55102f27223314ae7c" prot="public" virt="non-virtual"><scope>video_player_signal</scope><name>~video_player_signal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b4b6f8d3b348fc2f711254b20d1724c9" kind="dir">
+    <compoundname>bindings</compoundname>
+    <innerfile refid="build_2python_2videoDisplay_2bindings_2pydoc__macros_8h">build/python/videoDisplay/bindings/pydoc_macros.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/build/python/videoDisplay/bindings/"/>
+  </compounddef>
+</doxygen>
