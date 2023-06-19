@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
     <compoundname>lib</compoundname>
+    <innerfile refid="playercontrols_8h">playercontrols.h</innerfile>
     <innerfile refid="video__display__impl_8h">video_display_impl.h</innerfile>
     <innerfile refid="video__player_8h">video_player.h</innerfile>
     <briefdescription>

@@ -1,5 +1,5 @@
 id: videoDisplay_video_display
-label: video_display
+label: Video Display
 category: '[videoDisplay]'
 
 templates:
@@ -11,15 +11,11 @@ templates:
         <%
             win = 'self._%s_win'%id
         %>\
-        videoDisplay.video_display(${type.size}*${vlen},${file},None)
+        videoDisplay.video_display(${type.size}*${vlen},None)
         ${win} = sip.wrapinstance(self.${id}.qwidget(), Qt.QWidget)
         ${gui_hint() % win}
 
-
 parameters:
--   id: file
-    label: File
-    dtype: file_save
 -   id: type
     label: Input Type
     dtype: enum
@@ -43,5 +39,7 @@ inputs:
     dtype: ${ type }
     vlen: ${ vlen }
 
+documentation: |-
+    The Video Display block displays a video stream in a window.
 
 file_format: 1

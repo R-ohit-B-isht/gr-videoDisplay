@@ -1,6 +1,9 @@
 var files_dup =
 [
     [ "api.h", "api_8h.html", "api_8h" ],
+    [ "playercontrols.h", "playercontrols_8h.html", [
+      [ "PlayerControls", "classPlayerControls.html", "classPlayerControls" ]
+    ] ],
     [ "build/python/videoDisplay/bindings/pydoc_macros.h", "build_2python_2videoDisplay_2bindings_2pydoc__macros_8h.html", "build_2python_2videoDisplay_2bindings_2pydoc__macros_8h" ],
     [ "docs/doxygen/pydoc_macros.h", "docs_2doxygen_2pydoc__macros_8h.html", "docs_2doxygen_2pydoc__macros_8h" ],
     [ "video_display.h", "video__display_8h.html", [

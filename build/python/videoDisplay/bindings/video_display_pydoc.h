@@ -15,32 +15,30 @@
  */
 
 
-static const char* __doc_gr_videoDisplay_video_display = R"doc(<+description of block+>
+static const char* __doc_gr_videoDisplay_video_display = R"doc(A video display block for displaying video in a Qt widget.
+
+This block displays video in a Qt widget. The widget is created in the constructor and can be accessed with the qwidget() method. The widget is a QWidget and can be used as a child widget in other Qt widgets.
 
 Constructor Specific Documentation:
 
-Return a shared_ptr to a new instance of videoDisplay::video_display.
-
-To avoid accidental use of raw pointers, videoDisplay::video_display's constructor is in a private implementation class. videoDisplay::video_display::make is the public interface for creating new instances.
+Build a video display block.
 
 Args:
-    itemsize : 
-    filename : 
-    parent : )doc";
+    itemsize : The size of the items in the video stream.
+    parent : The parent widget.)doc";
 
 
-static const char* __doc_gr_videoDisplay_video_display_make = R"doc(<+description of block+>
+static const char* __doc_gr_videoDisplay_video_display_make = R"doc(A video display block for displaying video in a Qt widget.
+
+This block displays video in a Qt widget. The widget is created in the constructor and can be accessed with the qwidget() method. The widget is a QWidget and can be used as a child widget in other Qt widgets.
 
 Constructor Specific Documentation:
 
-Return a shared_ptr to a new instance of videoDisplay::video_display.
-
-To avoid accidental use of raw pointers, videoDisplay::video_display's constructor is in a private implementation class. videoDisplay::video_display::make is the public interface for creating new instances.
+Build a video display block.
 
 Args:
-    itemsize : 
-    filename : 
-    parent : )doc";
+    itemsize : The size of the items in the video stream.
+    parent : The parent widget.)doc";
 
 
 static const char* __doc_gr_videoDisplay_video_display_exec_ = R"doc()doc";

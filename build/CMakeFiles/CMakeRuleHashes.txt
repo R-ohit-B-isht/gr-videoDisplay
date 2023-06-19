@@ -2,6 +2,7 @@
 cefbfd05752690f6b91ff53e47761c75 CMakeFiles/uninstall
 96e936d60440dc77c6fa85b4bbf4cd2b docs/doxygen/CMakeFiles/doxygen_target
 3c58556d96b976997b8d0527bd61ec6c docs/doxygen/xml
+43e33d369630f5a8df0aa18aa2bd9a8d lib/moc_playercontrols.cpp
 46560c1fb42364ab27670164d3acca2f lib/moc_video_player.cpp
 46c36ba79669db2ef04e859ba0c3c0e5 python/videoDisplay/CMakeFiles/copy_module_for_tests
 206967bab47938a612ee6110be93ba72 python/videoDisplay/bindings/CMakeFiles/extracted_docstrings

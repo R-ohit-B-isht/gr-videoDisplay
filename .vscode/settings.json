@@ -2,7 +2,9 @@
     "files.associations": {
         "cstdio": "cpp",
         "fstream": "cpp",
-        "qvboxlayout": "cpp"
+        "qvboxlayout": "cpp",
+        "*.tcc": "cpp",
+        "new": "cpp"
     },
     "editor.formatOnSave": true
 }

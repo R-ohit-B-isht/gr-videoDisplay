@@ -1,10 +1,10 @@
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: \
  /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.cc \
  /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h \
- /home/rohit/radioconda/include/qt/QtMultimediaWidgets/QVideoWidget \
- /home/rohit/radioconda/include/qt/QtMultimediaWidgets/qvideowidget.h \
- /home/rohit/radioconda/include/qt/QtWidgets/qwidget.h \
- /home/rohit/radioconda/include/qt/QtWidgets/qtwidgetsglobal.h \
+ /home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/QMediaPlayer \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qmediaplayer.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qtmultimediaglobal.h \
  /home/rohit/radioconda/include/qt/QtGui/qtguiglobal.h \
  /home/rohit/radioconda/include/qt/QtCore/qglobal.h \
  /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/type_traits \
@@ -125,12 +125,12 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: \
  /home/rohit/radioconda/include/qt/QtCore/qnumeric.h \
  /home/rohit/radioconda/include/qt/QtCore/qversiontagging.h \
  /home/rohit/radioconda/include/qt/QtGui/qtgui-config.h \
- /home/rohit/radioconda/include/qt/QtWidgets/qtwidgets-config.h \
- /home/rohit/radioconda/include/qt/QtGui/qwindowdefs.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qtmultimedia-config.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qmediaobject.h \
+ /home/rohit/radioconda/include/qt/QtCore/qobject.h \
  /home/rohit/radioconda/include/qt/QtCore/qobjectdefs.h \
  /home/rohit/radioconda/include/qt/QtCore/qnamespace.h \
  /home/rohit/radioconda/include/qt/QtCore/qobjectdefs_impl.h \
- /home/rohit/radioconda/include/qt/QtCore/qobject.h \
  /home/rohit/radioconda/include/qt/QtCore/qstring.h \
  /home/rohit/radioconda/include/qt/QtCore/qchar.h \
  /home/rohit/radioconda/include/qt/QtCore/qbytearray.h \
@@ -243,6 +243,52 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: \
  /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/limits \
  /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/ctime \
  /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/parse_numbers.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qmultimedia.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qmediacontent.h \
+ /home/rohit/radioconda/include/qt/QtCore/qshareddata.h \
+ /home/rohit/radioconda/include/qt/QtCore/qhash.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qmediaresource.h \
+ /home/rohit/radioconda/include/qt/QtCore/qmap.h \
+ /home/rohit/radioconda/include/qt/QtNetwork/qnetworkrequest.h \
+ /home/rohit/radioconda/include/qt/QtNetwork/qtnetworkglobal.h \
+ /home/rohit/radioconda/include/qt/QtNetwork/qtnetwork-config.h \
+ /home/rohit/radioconda/include/qt/QtCore/QSharedDataPointer \
+ /home/rohit/radioconda/include/qt/QtCore/qshareddata.h \
+ /home/rohit/radioconda/include/qt/QtCore/QString \
+ /home/rohit/radioconda/include/qt/QtCore/qstring.h \
+ /home/rohit/radioconda/include/qt/QtCore/QUrl \
+ /home/rohit/radioconda/include/qt/QtCore/qurl.h \
+ /home/rohit/radioconda/include/qt/QtCore/QVariant \
+ /home/rohit/radioconda/include/qt/QtCore/qvariant.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/variant \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qmediaenumdebug.h \
+ /home/rohit/radioconda/include/qt/QtCore/qmetaobject.h \
+ /home/rohit/radioconda/include/qt/QtCore/qvariant.h \
+ /home/rohit/radioconda/include/qt/QtCore/qdebug.h \
+ /home/rohit/radioconda/include/qt/QtCore/qtextstream.h \
+ /home/rohit/radioconda/include/qt/QtCore/qiodevice.h \
+ /home/rohit/radioconda/include/qt/QtCore/qlocale.h \
+ /home/rohit/radioconda/include/qt/QtCore/qset.h \
+ /home/rohit/radioconda/include/qt/QtCore/qcontiguouscache.h \
+ /home/rohit/radioconda/include/qt/QtCore/qsharedpointer.h \
+ /home/rohit/radioconda/include/qt/QtCore/qsharedpointer_impl.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/memory \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/stl_raw_storage_iter.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/align.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/unique_ptr.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/shared_ptr.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/shared_ptr_base.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/ext/concurrence.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/shared_ptr_atomic.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/backward/auto_ptr.h \
+ /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/pstl/glue_memory_defs.h \
+ /home/rohit/radioconda/include/qt/QtMultimedia/qaudio.h \
+ /home/rohit/radioconda/include/qt/QtNetwork/qnetworkconfiguration.h \
+ /home/rohit/radioconda/include/qt/QtWidgets/QWidget \
+ /home/rohit/radioconda/include/qt/QtWidgets/qwidget.h \
+ /home/rohit/radioconda/include/qt/QtWidgets/qtwidgetsglobal.h \
+ /home/rohit/radioconda/include/qt/QtWidgets/qtwidgets-config.h \
+ /home/rohit/radioconda/include/qt/QtGui/qwindowdefs.h \
  /home/rohit/radioconda/include/qt/QtCore/qmargins.h \
  /home/rohit/radioconda/include/qt/QtGui/qpaintdevice.h \
  /home/rohit/radioconda/include/qt/QtCore/qrect.h \
@@ -257,63 +303,23 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: \
  /home/rohit/radioconda/include/qt/QtGui/qpolygon.h \
  /home/rohit/radioconda/include/qt/QtGui/qregion.h \
  /home/rohit/radioconda/include/qt/QtCore/qdatastream.h \
- /home/rohit/radioconda/include/qt/QtCore/qiodevice.h \
  /home/rohit/radioconda/include/qt/QtCore/qline.h \
  /home/rohit/radioconda/include/qt/QtGui/qtransform.h \
  /home/rohit/radioconda/include/qt/QtGui/qimage.h \
  /home/rohit/radioconda/include/qt/QtGui/qpixelformat.h \
  /home/rohit/radioconda/include/qt/QtGui/qpixmap.h \
- /home/rohit/radioconda/include/qt/QtCore/qsharedpointer.h \
- /home/rohit/radioconda/include/qt/QtCore/qshareddata.h \
- /home/rohit/radioconda/include/qt/QtCore/qhash.h \
- /home/rohit/radioconda/include/qt/QtCore/qsharedpointer_impl.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/memory \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/stl_raw_storage_iter.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/align.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/unique_ptr.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/shared_ptr.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/shared_ptr_base.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/ext/concurrence.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/shared_ptr_atomic.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/backward/auto_ptr.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/pstl/glue_memory_defs.h \
  /home/rohit/radioconda/include/qt/QtGui/qfont.h \
  /home/rohit/radioconda/include/qt/QtGui/qfontmetrics.h \
  /home/rohit/radioconda/include/qt/QtGui/qfontinfo.h \
  /home/rohit/radioconda/include/qt/QtWidgets/qsizepolicy.h \
  /home/rohit/radioconda/include/qt/QtGui/qcursor.h \
  /home/rohit/radioconda/include/qt/QtGui/qkeysequence.h \
+ /home/rohit/radioconda/include/qt/QtMultimediaWidgets/QVideoWidget \
+ /home/rohit/radioconda/include/qt/QtMultimediaWidgets/qvideowidget.h \
+ /home/rohit/radioconda/include/qt/QtWidgets/qwidget.h \
  /home/rohit/radioconda/include/qt/QtMultimediaWidgets/qtmultimediawidgetdefs.h \
  /home/rohit/radioconda/include/qt/QtMultimedia/qmediabindableinterface.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qmediaobject.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qtmultimediaglobal.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qtmultimedia-config.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qmultimedia.h \
- /home/rohit/radioconda/include/qt/QtNetwork/QNetworkDatagram \
- /home/rohit/radioconda/include/qt/QtNetwork/qnetworkdatagram.h \
- /home/rohit/radioconda/include/qt/QtNetwork/qhostaddress.h \
- /home/rohit/radioconda/include/qt/QtNetwork/qtnetworkglobal.h \
- /home/rohit/radioconda/include/qt/QtNetwork/qtnetwork-config.h \
- /home/rohit/radioconda/include/qt/QtNetwork/qabstractsocket.h \
- /home/rohit/radioconda/include/qt/QtCore/qdebug.h \
- /home/rohit/radioconda/include/qt/QtCore/qmap.h \
- /home/rohit/radioconda/include/qt/QtCore/qtextstream.h \
- /home/rohit/radioconda/include/qt/QtCore/qlocale.h \
- /home/rohit/radioconda/include/qt/QtCore/qvariant.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/variant \
- /home/rohit/radioconda/include/qt/QtCore/qset.h \
- /home/rohit/radioconda/include/qt/QtCore/qcontiguouscache.h \
- /home/rohit/radioconda/include/qt/QtNetwork/QUdpSocket \
- /home/rohit/radioconda/include/qt/QtNetwork/qudpsocket.h \
  /home/rohit/radioconda/include/qt/QtWidgets/QWidget \
- /home/rohit/radioconda/include/qt/QtWidgets/qwidget.h \
- /home/rohit/radioconda/include/qt/QtCore/QBuffer \
- /home/rohit/radioconda/include/qt/QtCore/qbuffer.h \
- /home/rohit/radioconda/include/qt/QtCore/QByteArray \
- /home/rohit/radioconda/include/qt/QtCore/qbytearray.h \
- /home/rohit/radioconda/include/qt/QtCore/QFile \
- /home/rohit/radioconda/include/qt/QtCore/qfile.h \
- /home/rohit/radioconda/include/qt/QtCore/qfiledevice.h \
  /home/rohit/radioconda/include/qt/QtWidgets/QLabel \
  /home/rohit/radioconda/include/qt/QtWidgets/qlabel.h \
  /home/rohit/radioconda/include/qt/QtWidgets/qframe.h \
@@ -321,23 +327,6 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: \
  /home/rohit/radioconda/include/qt/QtWidgets/qmainwindow.h \
  /home/rohit/radioconda/include/qt/QtWidgets/qtabwidget.h \
  /home/rohit/radioconda/include/qt/QtGui/qicon.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/QMediaPlayer \
- /home/rohit/radioconda/include/qt/QtMultimedia/qmediaplayer.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qmediacontent.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qmediaresource.h \
- /home/rohit/radioconda/include/qt/QtNetwork/qnetworkrequest.h \
- /home/rohit/radioconda/include/qt/QtCore/QSharedDataPointer \
- /home/rohit/radioconda/include/qt/QtCore/qshareddata.h \
- /home/rohit/radioconda/include/qt/QtCore/QString \
- /home/rohit/radioconda/include/qt/QtCore/qstring.h \
- /home/rohit/radioconda/include/qt/QtCore/QUrl \
- /home/rohit/radioconda/include/qt/QtCore/qurl.h \
- /home/rohit/radioconda/include/qt/QtCore/QVariant \
- /home/rohit/radioconda/include/qt/QtCore/qvariant.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qmediaenumdebug.h \
- /home/rohit/radioconda/include/qt/QtCore/qmetaobject.h \
- /home/rohit/radioconda/include/qt/QtMultimedia/qaudio.h \
- /home/rohit/radioconda/include/qt/QtNetwork/qnetworkconfiguration.h \
  /home/rohit/radioconda/include/qt/QtCore/QObject \
  /home/rohit/radioconda/include/qt/QtCore/qobject.h \
  /home/rohit/radioconda/include/qt/QtWidgets/QPushButton \
@@ -346,29 +335,15 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: \
  /home/rohit/radioconda/include/qt/QtWidgets/QSlider \
  /home/rohit/radioconda/include/qt/QtWidgets/qslider.h \
  /home/rohit/radioconda/include/qt/QtWidgets/qabstractslider.h \
- /home/rohit/radioconda/include/qt/QtCore/QTemporaryFile \
- /home/rohit/radioconda/include/qt/QtCore/qtemporaryfile.h \
- /home/rohit/radioconda/include/qt/QtCore/qfile.h \
- /home/rohit/radioconda/include/qt/QtCore/QThread \
- /home/rohit/radioconda/include/qt/QtCore/qthread.h \
- /home/rohit/radioconda/include/qt/QtCore/qdeadlinetimer.h \
- /home/rohit/radioconda/include/qt/QtCore/qelapsedtimer.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/future \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/mutex \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/std_mutex.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/unique_lock.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/condition_variable \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/atomic_futex.h \
- /home/rohit/radioconda/x86_64-conda-linux-gnu/include/c++/11.3.0/bits/std_thread.h \
  /home/rohit/radioconda/include/qt/QtCore/QTime \
  /home/rohit/radioconda/include/qt/QtCore/qdatetime.h \
+ /home/rohit/radioconda/include/qt/QtCore/QTimer \
+ /home/rohit/radioconda/include/qt/QtCore/qtimer.h \
+ /home/rohit/radioconda/include/qt/QtCore/qbasictimer.h \
  /home/rohit/radioconda/include/qt/QtCore/QUrl \
  /home/rohit/radioconda/include/qt/QtWidgets/QVBoxLayout \
  /home/rohit/radioconda/include/qt/QtWidgets/qboxlayout.h \
  /home/rohit/radioconda/include/qt/QtWidgets/qlayout.h \
  /home/rohit/radioconda/include/qt/QtWidgets/qlayoutitem.h \
  /home/rohit/radioconda/include/qt/QtWidgets/qboxlayout.h \
- /home/rohit/radioconda/include/qt/QtWidgets/qgridlayout.h \
- /home/rohit/radioconda/include/qt/QtWidgets/QMessageBox \
- /home/rohit/radioconda/include/qt/QtWidgets/qmessagebox.h \
- /home/rohit/radioconda/include/qt/QtWidgets/qdialog.h
+ /home/rohit/radioconda/include/qt/QtWidgets/qgridlayout.h

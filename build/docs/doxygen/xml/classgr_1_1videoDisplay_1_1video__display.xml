@@ -17,22 +17,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="27" column="29" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="35" column="29" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classgr_1_1videoDisplay_1_1video__display_1a372668656f55c8b8ba43b4948750967d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classgr_1_1videoDisplay_1_1video__display_1aeab0a3c987e462e797eedb858aa21bc4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classgr_1_1videoDisplay_1_1video__display_1a11b4c95adb49a098ad66ba2320d655d9" kindref="member">sptr</ref></type>
         <definition>static sptr gr::videoDisplay::video_display::make</definition>
-        <argsstring>(size_t itemsize, const char *filename, QWidget *parent=nullptr)</argsstring>
+        <argsstring>(size_t itemsize, QWidget *parent=nullptr)</argsstring>
         <name>make</name>
         <param>
           <type>size_t</type>
           <declname>itemsize</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>filename</declname>
         </param>
         <param>
           <type>QWidget *</type>
@@ -40,14 +36,33 @@
           <defval>nullptr</defval>
         </param>
         <briefdescription>
-<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1videoDisplay_1_1video__display" kindref="compound">videoDisplay::video_display</ref>. </para>
+<para>Build a video display block. </para>
         </briefdescription>
         <detaileddescription>
-<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1videoDisplay_1_1video__display" kindref="compound">videoDisplay::video_display</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1videoDisplay_1_1video__display_1a372668656f55c8b8ba43b4948750967d" kindref="member">videoDisplay::video_display::make</ref> is the public interface for creating new instances. </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the items in the video stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parent widget.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared_ptr to a new <ref refid="classgr_1_1videoDisplay_1_1video__display" kindref="compound">video_display</ref> block. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="37" column="17"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="45" column="17"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -63,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="38" column="18"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="46" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classgr_1_1videoDisplay_1_1video__display_1a0afa0eb8b6c050d80f155ba2547755cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>QWidget *</type>
@@ -77,13 +92,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="39" column="21"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="47" column="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>&lt;+description of block+&gt; </para>
+<para>A video display block for displaying video in a Qt widget. </para>
     </briefdescription>
     <detaileddescription>
+<para>This block displays video in a Qt widget. The widget is created in the constructor and can be accessed with the <ref refid="classgr_1_1videoDisplay_1_1video__display_1a0afa0eb8b6c050d80f155ba2547755cf" kindref="member">qwidget()</ref> method. The widget is a QWidget and can be used as a child widget in other Qt widgets. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -113,10 +129,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="24" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" bodystart="25" bodyend="40"/>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" line="32" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/include/gnuradio/videoDisplay/video_display.h" bodystart="33" bodyend="48"/>
     <listofallmembers>
       <member refid="classgr_1_1videoDisplay_1_1video__display_1a4c846f76815a3534a607adfb7b3c306b" prot="public" virt="pure-virtual"><scope>gr::videoDisplay::video_display</scope><name>exec_</name></member>
-      <member refid="classgr_1_1videoDisplay_1_1video__display_1a372668656f55c8b8ba43b4948750967d" prot="public" virt="non-virtual"><scope>gr::videoDisplay::video_display</scope><name>make</name></member>
+      <member refid="classgr_1_1videoDisplay_1_1video__display_1aeab0a3c987e462e797eedb858aa21bc4" prot="public" virt="non-virtual"><scope>gr::videoDisplay::video_display</scope><name>make</name></member>
       <member refid="classgr_1_1videoDisplay_1_1video__display_1a0afa0eb8b6c050d80f155ba2547755cf" prot="public" virt="pure-virtual"><scope>gr::videoDisplay::video_display</scope><name>qwidget</name></member>
       <member refid="classgr_1_1videoDisplay_1_1video__display_1a11b4c95adb49a098ad66ba2320d655d9" prot="public" virt="non-virtual"><scope>gr::videoDisplay::video_display</scope><name>sptr</name></member>
     </listofallmembers>

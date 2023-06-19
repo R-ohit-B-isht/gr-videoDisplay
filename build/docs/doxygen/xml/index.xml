@@ -1,8 +1,40 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classPlayerControls" kind="class"><name>PlayerControls</name>
+    <member refid="classPlayerControls_1a9d9b4c0052bdbd7c22d3d300ea1333ab" kind="variable"><name>m_playerState</name></member>
+    <member refid="classPlayerControls_1ab2e3807388c2bb98e483c52fb3fbec5d" kind="variable"><name>m_playerMuted</name></member>
+    <member refid="classPlayerControls_1add7a9b28fea51bb5126771e2fa88cde6" kind="variable"><name>m_playButton</name></member>
+    <member refid="classPlayerControls_1ae95e464f19f609c084af09bf000de18f" kind="variable"><name>m_stopButton</name></member>
+    <member refid="classPlayerControls_1a3e48a9bf356ddb712c61237622c7ede1" kind="variable"><name>m_nextButton</name></member>
+    <member refid="classPlayerControls_1a2fce460a1d2dd19a65d350c72541d0da" kind="variable"><name>m_previousButton</name></member>
+    <member refid="classPlayerControls_1a67f3990c1dcf78add74c5f3129a71e65" kind="variable"><name>m_muteButton</name></member>
+    <member refid="classPlayerControls_1a5d0954c7533c866105bd269a325ba539" kind="variable"><name>m_volumeSlider</name></member>
+    <member refid="classPlayerControls_1a68a2820fa843da85dfce4981597312cc" kind="variable"><name>m_rateBox</name></member>
+    <member refid="classPlayerControls_1a0ac5db46115656191dda4fc91ceea506" kind="function"><name>PlayerControls</name></member>
+    <member refid="classPlayerControls_1a93519160533f11e82c9669f932d69785" kind="function"><name>state</name></member>
+    <member refid="classPlayerControls_1aeb3c780cd2338edcfac66744a8732f18" kind="function"><name>volume</name></member>
+    <member refid="classPlayerControls_1a99a5e6eb22e08b1c0f1813f2e4d4bd90" kind="function"><name>isMuted</name></member>
+    <member refid="classPlayerControls_1a45670d79ea35ef81d18b76ee606f51d8" kind="function"><name>playbackRate</name></member>
+    <member refid="classPlayerControls_1a3f893f8f7a76a9923b7a00c3608a3a29" kind="slot"><name>setState</name></member>
+    <member refid="classPlayerControls_1a99fa40918c2bb0adb02a4c06bdf427a6" kind="slot"><name>setVolume</name></member>
+    <member refid="classPlayerControls_1ac2e2269194c68754031a8460c14c00b9" kind="slot"><name>setMuted</name></member>
+    <member refid="classPlayerControls_1a193c465aa9d4eb3cbdf564f7701a5d46" kind="slot"><name>setPlaybackRate</name></member>
+    <member refid="classPlayerControls_1a1983a779ec9fc6c00def119ac53b8663" kind="signal"><name>play</name></member>
+    <member refid="classPlayerControls_1abeaa95aaebcd2dbe9e9cb8f651f7e779" kind="signal"><name>pause</name></member>
+    <member refid="classPlayerControls_1a3e4833b52d2cb01ae032eff9a471dad7" kind="signal"><name>stop</name></member>
+    <member refid="classPlayerControls_1a35285392c51932c4a0152d47d9450db3" kind="signal"><name>next5</name></member>
+    <member refid="classPlayerControls_1ae67755ed6aca6522d7809d25eb534591" kind="signal"><name>previous5</name></member>
+    <member refid="classPlayerControls_1a94314700c550bb2b4b5bc83871010207" kind="signal"><name>changeVolume</name></member>
+    <member refid="classPlayerControls_1a985422768fb2d9df32984b20627dbd6a" kind="signal"><name>changeMuting</name></member>
+    <member refid="classPlayerControls_1a6fc3ad3f0791da69589dbb7004a24e6b" kind="signal"><name>changeRate</name></member>
+    <member refid="classPlayerControls_1ac6e7b225e491feea3b4c3f926357c9e7" kind="slot"><name>playClicked</name></member>
+    <member refid="classPlayerControls_1a3964e922d8091e616665e82d423de188" kind="slot"><name>muteClicked</name></member>
+    <member refid="classPlayerControls_1a7639da40075f23bd73650981486f493b" kind="slot"><name>updateRate</name></member>
+    <member refid="classPlayerControls_1a0fdd3d3e11df64dfce5660824a1ddaa3" kind="slot"><name>onVolumeSliderValueChanged</name></member>
+  </compound>
   <compound refid="classgr_1_1videoDisplay_1_1video__display" kind="class"><name>gr::videoDisplay::video_display</name>
     <member refid="classgr_1_1videoDisplay_1_1video__display_1a11b4c95adb49a098ad66ba2320d655d9" kind="typedef"><name>sptr</name></member>
-    <member refid="classgr_1_1videoDisplay_1_1video__display_1a372668656f55c8b8ba43b4948750967d" kind="function"><name>make</name></member>
+    <member refid="classgr_1_1videoDisplay_1_1video__display_1aeab0a3c987e462e797eedb858aa21bc4" kind="function"><name>make</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display_1a4c846f76815a3534a607adfb7b3c306b" kind="function"><name>exec_</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display_1a0afa0eb8b6c050d80f155ba2547755cf" kind="function"><name>qwidget</name></member>
   </compound>
@@ -14,27 +46,28 @@
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a3ba4d14b005f83f05f37df00be57cf95" kind="variable"><name>d_video_player</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1aa8b35f6263b24bef6237ee91fe363188" kind="variable"><name>d_parent</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a48155bf3395020b5eefa6ce8590d5aeb" kind="variable"><name>d_video_player_signal</name></member>
+    <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a156dabdb64b4a5d4a716044410091245" kind="variable"><name>d_temp_file</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a31f163b939dd4a8615ca94b2fdaffcee" kind="variable"><name>d_qApplication</name></member>
-    <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a860b38a6eb8ee6539e2a91f15ce01ad2" kind="function"><name>video_display_impl</name></member>
+    <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1aadeac8ca6c6251a61b219aecd1b7369e" kind="function"><name>video_display_impl</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a98b12de569ac0a0c05d510c8b918e678" kind="function"><name>~video_display_impl</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1afddd4c529035b392ff063ab57de8b532" kind="function"><name>exec_</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a9515ac2247945a50fae275bdc4368f7c" kind="function"><name>qwidget</name></member>
     <member refid="classgr_1_1videoDisplay_1_1video__display__impl_1a079dc9175f80f6f49794377324a1481e" kind="function"><name>work</name></member>
   </compound>
   <compound refid="classvideo__player" kind="class"><name>video_player</name>
-    <member refid="classvideo__player_1ac72253f042608959cb691b890cc1a36c" kind="variable"><name>player</name></member>
+    <member refid="classvideo__player_1a25b54ad6d2e1727c0479ffc6dbbc1a78" kind="variable"><name>d_player</name></member>
     <member refid="classvideo__player_1a798ebf466791ea429560b50a31711474" kind="variable"><name>d_videoFile</name></member>
     <member refid="classvideo__player_1a62df708c843a7afeace656c4dd3d2286" kind="variable"><name>d_downloading</name></member>
     <member refid="classvideo__player_1a09f01cbfa8401c0af56de6790b51aa5a" kind="variable"><name>d_position</name></member>
+    <member refid="classvideo__player_1abeddbc4eb84ee1fdb3b4bc2b14bf1355" kind="variable"><name>d_timer</name></member>
     <member refid="classvideo__player_1a133a33e6defb9375cd3814db2301781a" kind="function"><name>video_player</name></member>
     <member refid="classvideo__player_1aa867561d456607715c1dda2d93553370" kind="function"><name>~video_player</name></member>
-    <member refid="classvideo__player_1a7ba0d47cbc942d36fab94958852e6fc6" kind="function"><name>playvideo</name></member>
-    <member refid="classvideo__player_1aa52d0eb07442eb0a5a5ca46381a9b199" kind="function"><name>stopvideo</name></member>
+    <member refid="classvideo__player_1a4ac136bbf8a2eec429887673a7147e7d" kind="slot"><name>data_read</name></member>
   </compound>
   <compound refid="classvideo__player__signal" kind="class"><name>video_player_signal</name>
     <member refid="classvideo__player__signal_1ac752d0cfbb2c1cf0e26c65816c20770f" kind="function"><name>video_player_signal</name></member>
     <member refid="classvideo__player__signal_1a39bbb0f615bc3f55102f27223314ae7c" kind="function"><name>~video_player_signal</name></member>
-    <member refid="classvideo__player__signal_1a61bcf89918257edad748aef1d6713416" kind="signal"><name>data_send</name></member>
+    <member refid="classvideo__player__signal_1aee9f5cee36fcbc312dee45ffe7889987" kind="signal"><name>data_send</name></member>
   </compound>
   <compound refid="namespacegr" kind="namespace"><name>gr</name>
   </compound>
@@ -48,6 +81,8 @@
   <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
   </compound>
   <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="playercontrols_8h" kind="file"><name>playercontrols.h</name>
   </compound>
   <compound refid="build_2python_2videoDisplay_2bindings_2pydoc__macros_8h" kind="file"><name>build/python/videoDisplay/bindings/pydoc_macros.h</name>
     <member refid="build_2python_2videoDisplay_2bindings_2pydoc__macros_8h_1afa7cf06549cf7fd295f622ef6f376357" kind="define"><name>__EXPAND</name></member>
@@ -116,9 +151,9 @@
   </compound>
   <compound refid="dir_359d2bec989c9a8deeeb9aee335c1c76" kind="dir"><name>doxygen</name>
   </compound>
-  <compound refid="dir_902d6fe55786be073ae6681293cdb979" kind="dir"><name>gnuradio</name>
-  </compound>
   <compound refid="dir_d5646a4d2acea6cd94665cfd9ba3943c" kind="dir"><name>gnuradio</name>
+  </compound>
+  <compound refid="dir_902d6fe55786be073ae6681293cdb979" kind="dir"><name>gnuradio</name>
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>
@@ -136,9 +171,9 @@
   </compound>
   <compound refid="dir_ecf1a148f230c6a61622a84d1ce5bdf5" kind="dir"><name>videoDisplay</name>
   </compound>
-  <compound refid="dir_fb3d7edbdd95af63428120bbc4cd2004" kind="dir"><name>videoDisplay</name>
-  </compound>
   <compound refid="dir_82ceec6814c862f581c643b0c8b4a455" kind="dir"><name>videoDisplay</name>
+  </compound>
+  <compound refid="dir_fb3d7edbdd95af63428120bbc4cd2004" kind="dir"><name>videoDisplay</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

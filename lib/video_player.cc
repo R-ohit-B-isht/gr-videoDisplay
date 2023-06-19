@@ -1,23 +1,33 @@
+/* -*- c++ -*- */
+/*
+ * Copyright 2023 Free Software Foundation, Inc.
+ *
+ * This file is part of GNU Radio
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 #include "video_player.h"
-// #include "ui_video_player.h"
-#include <QMessageBox>
 
 video_player::video_player(QWidget* parent, QString videoFile)
     : QWidget(parent), d_videoFile(videoFile)
 
 {
-    qInfo() << d_videoFile;
-
     QVideoWidget* videoWidget = new QVideoWidget(this);
+    d_player = new QMediaPlayer;
+    d_player->setVideoOutput(videoWidget);
+    d_player->setMedia(QUrl::fromLocalFile(d_videoFile));
     QSlider* timeSlider = new QSlider(Qt::Horizontal, this);
     QLabel* durationLabel = new QLabel(this);
     QLabel* playedTimeLabel = new QLabel(this);
-    QPushButton* start_button = new QPushButton("Play", this);
-    QPushButton* stop_button = new QPushButton("Stop", this);
+
+    PlayerControls* controls = new PlayerControls(this);
+    controls->setState(d_player->state());
+    controls->setVolume(d_player->volume());
+    controls->setMuted(controls->isMuted());
 
     QHBoxLayout* buttonLayout = new QHBoxLayout;
-    buttonLayout->addWidget(start_button);
-    buttonLayout->addWidget(stop_button);
+    buttonLayout->addWidget(controls);
 
     QHBoxLayout* sliderLayout = new QHBoxLayout;
     sliderLayout->addWidget(playedTimeLabel);
@@ -30,88 +40,107 @@ video_player::video_player(QWidget* parent, QString videoFile)
     layout->addItem(buttonLayout);
     setLayout(layout);
 
-    player = new QMediaPlayer;
-    player->setVideoOutput(videoWidget);
-    player->setMedia(QUrl::fromLocalFile(d_videoFile));
+    d_timer.setInterval(2000);
+    d_timer.setSingleShot(true);
 
-    connect(start_button, &QPushButton::clicked, this, &video_player::playvideo);
-    connect(stop_button, &QPushButton::clicked, this, &video_player::stopvideo);
-    // connect(timeSlider, &QSlider::sliderMoved, player, &QMediaPlayer::setPosition);
-
-    connect(player, &QMediaPlayer::positionChanged, [=](qint64 position) {
-        timeSlider->setValue(position);
-        if (d_position < position) {
-            d_position = position;
+    connect(controls, &PlayerControls::next5, [=]() {
+        if (d_position < d_player->duration() - 5000) {
+            d_position += 5000;
+            d_player->setPosition(d_position);
+        } else {
+            d_position = d_player->duration();
+            d_player->setPosition(d_position);
         }
-        QString playedTime = QTime(0, 0).addMSecs(position).toString("mm:ss");
-        playedTimeLabel->setText(playedTime);
     });
 
-    connect(player, &QMediaPlayer::durationChanged, [=](qint64 duration) {
+    connect(controls, &PlayerControls::previous5, [=]() {
+        if (d_position >= 5000) {
+            d_position -= 5000;
+            d_player->setPosition(d_position);
+        } else {
+            d_position = 0;
+            d_player->setPosition(d_position);
+        }
+    });
+
+    connect(controls, &PlayerControls::play, d_player, &QMediaPlayer::play);
+    connect(controls, &PlayerControls::pause, d_player, &QMediaPlayer::pause);
+    connect(controls, &PlayerControls::stop, d_player, &QMediaPlayer::stop);
+    connect(controls, &PlayerControls::changeVolume, d_player, &QMediaPlayer::setVolume);
+    connect(controls, &PlayerControls::changeMuting, d_player, &QMediaPlayer::setMuted);
+    connect(
+        controls, &PlayerControls::changeRate, d_player, &QMediaPlayer::setPlaybackRate);
+    connect(controls,
+            &PlayerControls::stop,
+            videoWidget,
+            QOverload<>::of(&QVideoWidget::update));
+
+    connect(d_player, &QMediaPlayer::stateChanged, controls, &PlayerControls::setState);
+    connect(d_player, &QMediaPlayer::volumeChanged, controls, &PlayerControls::setVolume);
+    connect(d_player, &QMediaPlayer::mutedChanged, controls, &PlayerControls::setMuted);
+
+    connect(&d_timer, &QTimer::timeout, [=]() {
+        if (d_downloading) {
+            d_downloading = false;
+        }
+    });
+
+    connect(timeSlider, &QSlider::sliderMoved, [=](int position) {
+        d_position = position;
+        d_player->setPosition(d_position);
+    });
+
+    connect(d_player, &QMediaPlayer::positionChanged, [=](qint64 position) {
+        timeSlider->setValue(position);
+        d_position = position;
+        QString playedTime = QTime(0, 0).addMSecs(position).toString("mm:ss");
+        playedTimeLabel->setText(playedTime);
+        if (d_position >= d_player->duration()) {
+            emit d_player->durationChanged(d_position);
+        }
+    });
+
+    connect(d_player, &QMediaPlayer::durationChanged, [=](qint64 duration) {
         timeSlider->setRange(0, duration);
         QString totalDuration = QTime(0, 0).addMSecs(duration).toString("mm:ss");
         durationLabel->setText(totalDuration);
     });
-
-    connect(timeSlider, &QSlider::sliderMoved, [this](int position) {
-        player->setPosition(position);
-    });
-
-    connect(
-        player, &QMediaPlayer::mediaStatusChanged, [](QMediaPlayer::MediaStatus status) {
-            if (status == QMediaPlayer::NoMedia || status == QMediaPlayer::InvalidMedia) {
-                QString warningMessage = "Stream contains no data.";
-                QMessageBox::warning(nullptr, "Warning", warningMessage);
-            }
-        });
-
-    connect(player,
+    connect(d_player,
             &QMediaPlayer::mediaStatusChanged,
             [this](QMediaPlayer::MediaStatus status) {
-                if (status == QMediaPlayer::NoMedia ||
-                    status == QMediaPlayer::InvalidMedia) {
-                    QString warningMessage = "Stream contains no data.";
-                    QMessageBox::warning(nullptr, "Warning", warningMessage);
-                } else if (status == QMediaPlayer::EndOfMedia && d_downloading) {
-                    qint64 currentPosition = player->position();
-                    qint64 duration = player->duration();
-                    qInfo() << "Current position:" << currentPosition;
-                    qInfo() << "Media duration:" << duration;
-                    if (currentPosition < duration) {
+                if (status == QMediaPlayer::LoadedMedia) {
+                    d_player->setPosition(d_position);
+                    d_player->play();
+                }
+                if (status == QMediaPlayer::EndOfMedia && d_downloading) {
+                    qint64 currentPosition = d_player->position();
+                    qint64 duration = d_player->duration();
+                    if (currentPosition <= duration) {
                         currentPosition = duration;
                     }
-                    if (d_position < currentPosition) {
+                    if (d_position <= currentPosition) {
                         d_position = currentPosition;
                     }
-                    player->setMedia(QUrl::fromLocalFile(d_videoFile));
-                    player->setPosition(d_position);
-                    player->play();
+                    d_player->setMedia(QUrl::fromLocalFile(d_videoFile));
+                    d_player->setPosition(d_position);
+                    d_player->play();
+
+                } else if (status == QMediaPlayer::EndOfMedia && !d_downloading) {
+                    d_position = 0;
+                    d_player->setPosition(d_position);
+                    d_player->stop();
                 }
             });
 }
 
 video_player::~video_player()
 {
-    // delete ui;
+    d_player->stop();
+    delete d_player;
 }
 
-// void data_read(QByteArray videoBuffer)
-// {
-//     // qInfo() << "data_read";
-// }
-
-void video_player::playvideo()
+void video_player::data_read()
 {
-    player->setMedia(QUrl::fromLocalFile(d_videoFile));
-    qInfo() << "pressed";
-    player->setPosition(d_position);
-    player->play();
-}
-
-void video_player::stopvideo()
-{
-    if (d_position < player->position()) {
-        d_position = player->position();
-    }
-    player->stop();
+    d_downloading = true;
+    d_timer.start();
 }

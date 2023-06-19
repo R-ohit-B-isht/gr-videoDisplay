@@ -1,23 +1,27 @@
+/* -*- c++ -*- */
+/*
+ * Copyright 2023 Free Software Foundation, Inc.
+ *
+ * This file is part of GNU Radio
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 #ifndef VIDEOPLAYER_HH
 #define VIDEOPLAYER_HH
 
+#include "playercontrols.h"
 
 #include <QtMultimediaWidgets/QVideoWidget>
-#include <QtNetwork/QNetworkDatagram>
-#include <QtNetwork/QUdpSocket>
 #include <QtWidgets/QWidget>
-#include <QBuffer>
-#include <QByteArray>
-#include <QFile>
 #include <QLabel>
 #include <QMainWindow>
 #include <QMediaPlayer>
 #include <QObject>
 #include <QPushButton>
 #include <QSlider>
-#include <QTemporaryFile>
-#include <QThread>
 #include <QTime>
+#include <QTimer>
 #include <QUrl>
 #include <QVBoxLayout>
 class video_player : public QWidget
@@ -27,17 +31,16 @@ class video_player : public QWidget
 public:
     video_player(QWidget* parent = nullptr, QString videoFile = "");
     ~video_player();
-    void playvideo();
-    void stopvideo();
 
-    // public slots:
-    //     void data_read(QByteArray videoBuffer);
+public slots:
+    void data_read();
 
 private:
-    QMediaPlayer* player;
+    QMediaPlayer* d_player;
     QString d_videoFile;
     bool d_downloading = true;
     qint64 d_position = 0;
+    QTimer d_timer;
 };
 
 #endif // VIDEOPLAYER_HH
@@ -54,7 +57,7 @@ public:
     ~video_player_signal() {}
 
 signals:
-    void data_send(QByteArray videoBuffer);
+    void data_send();
 };
 
 #endif // VIDEOSIGNAL_HH

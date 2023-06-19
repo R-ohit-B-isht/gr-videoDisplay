@@ -1,6 +1,8 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2023 gr-videoDisplay author.
+ * Copyright 2023 Free Software Foundation, Inc.
+ *
+ * This file is part of GNU Radio
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -17,8 +19,14 @@ namespace gr {
 namespace videoDisplay {
 
 /*!
- * \brief <+description of block+>
+ * \brief A video display block for displaying video in a Qt widget.
  * \ingroup videoDisplay
+ *
+ * \details
+ * This block displays video in a Qt widget. The widget is created
+ * in the constructor and can be accessed with the qwidget() method.
+ * The widget is a QWidget and can be used as a child widget in
+ * other Qt widgets.
  *
  */
 class VIDEODISPLAY_API video_display : virtual public gr::sync_block
@@ -27,14 +35,14 @@ public:
     typedef std::shared_ptr<video_display> sptr;
 
     /*!
-     * \brief Return a shared_ptr to a new instance of videoDisplay::video_display.
+     * \brief Build a video display block.
      *
-     * To avoid accidental use of raw pointers, videoDisplay::video_display's
-     * constructor is in a private implementation
-     * class. videoDisplay::video_display::make is the public interface for
-     * creating new instances.
+     * \param itemsize The size of the items in the video stream.
+     * \param parent The parent widget.
+     *
+     * \returns A shared_ptr to a new video_display block.
      */
-    static sptr make(size_t itemsize, const char* filename, QWidget* parent = nullptr);
+    static sptr make(size_t itemsize, QWidget* parent = nullptr);
     virtual void exec_() = 0;
     virtual QWidget* qwidget() = 0;
 };

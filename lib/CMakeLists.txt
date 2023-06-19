@@ -13,6 +13,7 @@ include(GrPlatform) #define LIB_SUFFIX
 
 set(display_moc_hdrs
     video_player.h
+    playercontrols.h
     )
 
 QT5_WRAP_CPP(display_moc_srcs ${display_moc_hdrs})
@@ -21,6 +22,7 @@ list(APPEND videoDisplay_sources
     ${display_moc_srcs}
     video_player.cc
     video_display_impl.cc
+    playercontrols.cc
 )
 
 set(videoDisplay_sources "${videoDisplay_sources}" PARENT_SCOPE)

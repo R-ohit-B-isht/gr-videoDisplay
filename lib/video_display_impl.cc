@@ -1,6 +1,8 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2023 gr-videoDisplay author.
+ * Copyright 2023 Free Software Foundation, Inc.
+ *
+ * This file is part of GNU Radio
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -11,6 +13,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <QDebug>
+#include <filesystem>
 
 #ifdef HAVE_IO_H
 #include <io.h>
@@ -21,7 +24,6 @@
 #define OUR_O_BINARY 0
 #endif
 
-// should be handled via configure
 #ifdef O_LARGEFILE
 #define OUR_O_LARGEFILE O_LARGEFILE
 #else
@@ -31,20 +33,16 @@
 namespace gr {
 namespace videoDisplay {
 
-video_display::sptr
-video_display::make(size_t itemsize, const char* filename, QWidget* parent)
+video_display::sptr video_display::make(size_t itemsize, QWidget* parent)
 {
-    return gnuradio::make_block_sptr<video_display_impl>(itemsize, filename, parent);
+    return gnuradio::make_block_sptr<video_display_impl>(itemsize, parent);
 }
 
-video_display_impl::video_display_impl(size_t itemsize,
-                                       const char* filename,
-                                       QWidget* parent)
+video_display_impl::video_display_impl(size_t itemsize, QWidget* parent)
     : gr::sync_block("video_display",
                      gr::io_signature::make(1, 1, itemsize),
                      gr::io_signature::make(0, 0, 0)),
       d_itemsize(itemsize),
-      d_filename(filename),
       d_parent(parent)
 {
     d_argv = nullptr;
@@ -58,34 +56,48 @@ video_display_impl::video_display_impl(size_t itemsize,
         d_argv[0] = '\0';
         d_qApplication = new QApplication(argc, &d_argv);
     }
+    d_temp_file.setAutoRemove(false);
+    d_temp_file.setFileTemplate("video_display_XXXXXX.mp4");
+    d_temp_file.open();
+    std::string temporary_file = d_temp_file.fileName().toStdString();
+    d_filename = temporary_file.data();
+    d_temp_file.close();
 
     int flags = O_WRONLY | O_CREAT | O_TRUNC | OUR_O_LARGEFILE | OUR_O_BINARY;
-    // truncate the file to zero bytes
+
     int fd = open(d_filename, flags, 0666);
     if (fd < 0) {
         qWarning() << "Could not open file " << d_filename;
         return;
     }
     close(fd);
-    // open the file for appending
+
     d_fp = std::fopen(d_filename, "ab+");
     if (!d_fp) {
         qWarning() << "Could not open file " << d_filename;
         return;
     }
-    // QFile file(d_filename);
-    // file.open(QIODevice::ReadOnly);
-    // QByteArray videoBuffer = file.readAll();
-    d_video_player = new video_player(d_parent, d_filename);
-    // d_video_player_signal = new video_player_signal();
 
-    // QObject::connect(d_video_player_signal,
-    //                  &video_player_signal::data_send,
-    //                  d_video_player,
-    //                  &video_player::data_read);
+    d_video_player = new video_player(d_parent, d_filename);
+    d_video_player_signal = new video_player_signal();
+
+    QObject::connect(d_video_player_signal,
+                     &video_player_signal::data_send,
+                     d_video_player,
+                     &video_player::data_read);
 }
 
-video_display_impl::~video_display_impl() {}
+video_display_impl::~video_display_impl()
+{
+    if (d_fp) {
+        fclose(d_fp);
+    }
+    delete d_argv;
+    std::string temporary_file = d_temp_file.fileName().toStdString();
+    d_filename = temporary_file.data();
+
+    QFile::remove(d_filename);
+}
 
 void video_display_impl::exec_() { d_qApplication->exec(); }
 
@@ -100,7 +112,7 @@ int video_display_impl::work(int noutput_items,
     int nwritten = 0;
 
     if (!d_fp)
-        return noutput_items; // drop output on the floor
+        return noutput_items;
 
     while (nwritten < noutput_items) {
         const int count = fwrite(inbuf, d_itemsize, noutput_items - nwritten, d_fp);
@@ -119,14 +131,9 @@ int video_display_impl::work(int noutput_items,
 
     fflush(d_fp);
 
-    // if inbuf not empty, send signal to video_player
-    // if (inbuf != nullptr && *inbuf != '\0') {
-    //     QFile file(d_filename);
-    //     file.open(QIODevice::ReadOnly);
-    //     QByteArray videoBuffer = file.readAll();
-    //     // emit d_video_player_signal->data_send(videoBuffer);
-    // }
-
+    if (inbuf != nullptr && inbuf[0] != '\0') {
+        emit d_video_player_signal->data_send();
+    }
 
     return noutput_items;
 }

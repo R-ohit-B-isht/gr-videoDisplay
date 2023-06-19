@@ -55,20 +55,20 @@ $(document).ready(function(){initNavTree('video__display__impl_8h_source.html','
 <div class="contents">
 <a href="video__display__impl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* -*- c++ -*- */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright 2023 gr-videoDisplay author.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright 2023 Free Software Foundation, Inc.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * SPDX-License-Identifier: GPL-3.0-or-later</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef INCLUDED_VIDEODISPLAY_VIDEO_DISPLAY_IMPL_H</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define INCLUDED_VIDEODISPLAY_VIDEO_DISPLAY_IMPL_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="video__player_8h.html">video_player.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="video__display_8h.html">gnuradio/videoDisplay/video_display.h</a>&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QtCore/QTemporaryFile&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;qapplication.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QDataStream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This file is part of GNU Radio</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * SPDX-License-Identifier: GPL-3.0-or-later</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef INCLUDED_VIDEODISPLAY_VIDEO_DISPLAY_IMPL_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define INCLUDED_VIDEODISPLAY_VIDEO_DISPLAY_IMPL_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="video__player_8h.html">video_player.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="video__display_8h.html">gnuradio/videoDisplay/video_display.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QtCore/QTemporaryFile&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;qapplication.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
@@ -86,36 +86,37 @@ $(document).ready(function(){initNavTree('video__display__impl_8h_source.html','
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classvideo__player.html">video_player</a>* d_video_player;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    QWidget* d_parent;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classvideo__player__signal.html">video_player_signal</a>* d_video_player_signal;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a860b38a6eb8ee6539e2a91f15ce01ad2">   36</a></span>&#160;    <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a860b38a6eb8ee6539e2a91f15ce01ad2">video_display_impl</a>(<span class="keywordtype">size_t</span> itemsize, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename, QWidget* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a98b12de569ac0a0c05d510c8b918e678">   37</a></span>&#160;    <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a98b12de569ac0a0c05d510c8b918e678">~video_display_impl</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#afddd4c529035b392ff063ab57de8b532">   39</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#afddd4c529035b392ff063ab57de8b532">exec_</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a31f163b939dd4a8615ca94b2fdaffcee">   40</a></span>&#160;    QApplication* <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a31f163b939dd4a8615ca94b2fdaffcee">d_qApplication</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a9515ac2247945a50fae275bdc4368f7c">   41</a></span>&#160;    QWidget* <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a9515ac2247945a50fae275bdc4368f7c">qwidget</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// Where all the action really happens</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a079dc9175f80f6f49794377324a1481e">   44</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a079dc9175f80f6f49794377324a1481e">work</a>(<span class="keywordtype">int</span> noutput_items,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;             gr_vector_const_void_star&amp; input_items,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;             gr_vector_void_star&amp; output_items) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;} <span class="comment">// namespace videoDisplay</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">// namespace gr</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDED_VIDEODISPLAY_VIDEO_DISPLAY_IMPL_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QTemporaryFile d_temp_file;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#aadeac8ca6c6251a61b219aecd1b7369e">   37</a></span>&#160;    <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#aadeac8ca6c6251a61b219aecd1b7369e">video_display_impl</a>(<span class="keywordtype">size_t</span> itemsize, QWidget* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a98b12de569ac0a0c05d510c8b918e678">   38</a></span>&#160;    <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a98b12de569ac0a0c05d510c8b918e678">~video_display_impl</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#afddd4c529035b392ff063ab57de8b532">   40</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#afddd4c529035b392ff063ab57de8b532">exec_</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a31f163b939dd4a8615ca94b2fdaffcee">   41</a></span>&#160;    QApplication* <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a31f163b939dd4a8615ca94b2fdaffcee">d_qApplication</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a9515ac2247945a50fae275bdc4368f7c">   42</a></span>&#160;    QWidget* <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a9515ac2247945a50fae275bdc4368f7c">qwidget</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Where all the action really happens</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a079dc9175f80f6f49794377324a1481e">   45</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classgr_1_1videoDisplay_1_1video__display__impl.html#a079dc9175f80f6f49794377324a1481e">work</a>(<span class="keywordtype">int</span> noutput_items,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;             gr_vector_const_void_star&amp; input_items,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;             gr_vector_void_star&amp; output_items) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">// namespace videoDisplay</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// namespace gr</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDED_VIDEODISPLAY_VIDEO_DISPLAY_IMPL_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html">gr::videoDisplay::video_display_impl</a></div><div class="ttdef"><b>Definition:</b> video_display_impl.h:25</div></div>
 <div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_a079dc9175f80f6f49794377324a1481e"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#a079dc9175f80f6f49794377324a1481e">gr::videoDisplay::video_display_impl::work</a></div><div class="ttdeci">int work(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items) override</div></div>
-<div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_a31f163b939dd4a8615ca94b2fdaffcee"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#a31f163b939dd4a8615ca94b2fdaffcee">gr::videoDisplay::video_display_impl::d_qApplication</a></div><div class="ttdeci">QApplication * d_qApplication</div><div class="ttdef"><b>Definition:</b> video_display_impl.h:40</div></div>
-<div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_a860b38a6eb8ee6539e2a91f15ce01ad2"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#a860b38a6eb8ee6539e2a91f15ce01ad2">gr::videoDisplay::video_display_impl::video_display_impl</a></div><div class="ttdeci">video_display_impl(size_t itemsize, const char *filename, QWidget *parent=nullptr)</div></div>
+<div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_a31f163b939dd4a8615ca94b2fdaffcee"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#a31f163b939dd4a8615ca94b2fdaffcee">gr::videoDisplay::video_display_impl::d_qApplication</a></div><div class="ttdeci">QApplication * d_qApplication</div><div class="ttdef"><b>Definition:</b> video_display_impl.h:41</div></div>
 <div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_a9515ac2247945a50fae275bdc4368f7c"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#a9515ac2247945a50fae275bdc4368f7c">gr::videoDisplay::video_display_impl::qwidget</a></div><div class="ttdeci">QWidget * qwidget() override</div></div>
 <div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_a98b12de569ac0a0c05d510c8b918e678"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#a98b12de569ac0a0c05d510c8b918e678">gr::videoDisplay::video_display_impl::~video_display_impl</a></div><div class="ttdeci">~video_display_impl()</div></div>
+<div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_aadeac8ca6c6251a61b219aecd1b7369e"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#aadeac8ca6c6251a61b219aecd1b7369e">gr::videoDisplay::video_display_impl::video_display_impl</a></div><div class="ttdeci">video_display_impl(size_t itemsize, QWidget *parent=nullptr)</div></div>
 <div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display__impl_html_afddd4c529035b392ff063ab57de8b532"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display__impl.html#afddd4c529035b392ff063ab57de8b532">gr::videoDisplay::video_display_impl::exec_</a></div><div class="ttdeci">void exec_() override</div></div>
-<div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display_html"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display.html">gr::videoDisplay::video_display</a></div><div class="ttdoc">&lt;+description of block+&gt;</div><div class="ttdef"><b>Definition:</b> video_display.h:25</div></div>
-<div class="ttc" id="aclassvideo__player__signal_html"><div class="ttname"><a href="classvideo__player__signal.html">video_player_signal</a></div><div class="ttdef"><b>Definition:</b> video_player.h:49</div></div>
-<div class="ttc" id="aclassvideo__player_html"><div class="ttname"><a href="classvideo__player.html">video_player</a></div><div class="ttdef"><b>Definition:</b> video_player.h:24</div></div>
-<div class="ttc" id="anamespacegr_html"><div class="ttname"><a href="namespacegr.html">gr</a></div><div class="ttdef"><b>Definition:</b> video_display.h:16</div></div>
+<div class="ttc" id="aclassgr_1_1videoDisplay_1_1video__display_html"><div class="ttname"><a href="classgr_1_1videoDisplay_1_1video__display.html">gr::videoDisplay::video_display</a></div><div class="ttdoc">A video display block for displaying video in a Qt widget.</div><div class="ttdef"><b>Definition:</b> video_display.h:33</div></div>
+<div class="ttc" id="aclassvideo__player__signal_html"><div class="ttname"><a href="classvideo__player__signal.html">video_player_signal</a></div><div class="ttdef"><b>Definition:</b> video_player.h:52</div></div>
+<div class="ttc" id="aclassvideo__player_html"><div class="ttname"><a href="classvideo__player.html">video_player</a></div><div class="ttdef"><b>Definition:</b> video_player.h:28</div></div>
+<div class="ttc" id="anamespacegr_html"><div class="ttname"><a href="namespacegr.html">gr</a></div><div class="ttdef"><b>Definition:</b> video_display.h:18</div></div>
 <div class="ttc" id="avideo__display_8h_html"><div class="ttname"><a href="video__display_8h.html">video_display.h</a></div></div>
 <div class="ttc" id="avideo__player_8h_html"><div class="ttname"><a href="video__player_8h.html">video_player.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -26,8 +26,8 @@ class qa_video_display(gr_unittest.TestCase):
         self.tb = None
 
     def test_instance(self):
-        # FIXME: Test will fail until you pass sensible arguments to the constructor
-        instance = video_display()
+        instance = video_display(gr.sizeof_gr_complex)
+        b = sip.wrapinstance(instance.qwidget(),Qt.QWidget)
 
     def test_001_descriptive_test_name(self):
         # set up fg

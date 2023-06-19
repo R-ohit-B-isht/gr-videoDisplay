@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="playercontrols_8h" kind="file" language="C++">
+    <compoundname>playercontrols.h</compoundname>
+    <includes local="no">QMediaPlayer</includes>
+    <includes local="no">QWidget</includes>
+    <includedby refid="video__player_8h" local="yes">video_player.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>QMediaPlayer</label>
+      </node>
+      <node id="3">
+        <label>QWidget</label>
+      </node>
+      <node id="1">
+        <label>playercontrols.h</label>
+        <link refid="playercontrols_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>video_display_impl.h</label>
+        <link refid="video__display__impl_8h"/>
+      </node>
+      <node id="2">
+        <label>video_player.h</label>
+        <link refid="video__player_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>playercontrols.h</label>
+        <link refid="playercontrols_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classPlayerControls" prot="public">PlayerControls</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.h"/>
+  </compounddef>
+</doxygen>

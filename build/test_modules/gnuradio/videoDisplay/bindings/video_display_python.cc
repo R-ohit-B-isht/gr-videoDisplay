@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(video_display.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(a17d0abe218df5d8d91f3270486815d7)                     */
+/* BINDTOOL_HEADER_FILE_HASH(245bdb93ea2400b6f036ecf9af8d91bb)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -38,9 +38,9 @@ void bind_video_display(py::module& m)
 
         .def(py::init(&video_display::make),
              py::arg("itemsize"),
-             py::arg("filename"),
              py::arg("parent") = nullptr,
              D(video_display, make))
+
 
         .def("exec_", &video_display::exec_, D(video_display, exec_))
 

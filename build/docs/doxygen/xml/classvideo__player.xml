@@ -5,18 +5,18 @@
     <basecompoundref prot="public" virt="non-virtual">QWidget</basecompoundref>
     <includes refid="video__player_8h" local="no">video_player.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classvideo__player_1ac72253f042608959cb691b890cc1a36c" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classvideo__player_1a25b54ad6d2e1727c0479ffc6dbbc1a78" prot="private" static="no" mutable="no">
         <type>QMediaPlayer *</type>
-        <definition>QMediaPlayer* video_player::player</definition>
+        <definition>QMediaPlayer* video_player::d_player</definition>
         <argsstring></argsstring>
-        <name>player</name>
+        <name>d_player</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="37" column="18" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="39" column="18" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvideo__player_1a798ebf466791ea429560b50a31711474" prot="private" static="no" mutable="no">
         <type>QString</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="38" column="13" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="40" column="13" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvideo__player_1a62df708c843a7afeace656c4dd3d2286" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="39" column="10" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="41" column="10" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvideo__player_1a09f01cbfa8401c0af56de6790b51aa5a" prot="private" static="no" mutable="no">
         <type>qint64</type>
@@ -57,7 +57,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="40" column="12" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="40" bodyend="-1"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="42" column="12" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classvideo__player_1abeddbc4eb84ee1fdb3b4bc2b14bf1355" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer video_player::d_timer</definition>
+        <argsstring></argsstring>
+        <name>d_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="43" column="12" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -82,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="28" column="5"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="32" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classvideo__player_1aa867561d456607715c1dda2d93553370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -95,33 +108,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="29" column="5"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="33" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classvideo__player_1a7ba0d47cbc942d36fab94958852e6fc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="classvideo__player_1a4ac136bbf8a2eec429887673a7147e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void video_player::playvideo</definition>
+        <definition>void video_player::data_read</definition>
         <argsstring>()</argsstring>
-        <name>playvideo</name>
+        <name>data_read</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="30" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classvideo__player_1aa52d0eb07442eb0a5a5ca46381a9b199" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void video_player::stopvideo</definition>
-        <argsstring>()</argsstring>
-        <name>stopvideo</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="31" column="10"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="36" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -150,14 +152,14 @@
         <label>QWidget</label>
       </node>
     </collaborationgraph>
-    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="23" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="24" bodyend="41"/>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="27" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="28" bodyend="44"/>
     <listofallmembers>
       <member refid="classvideo__player_1a62df708c843a7afeace656c4dd3d2286" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_downloading</name></member>
+      <member refid="classvideo__player_1a25b54ad6d2e1727c0479ffc6dbbc1a78" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_player</name></member>
       <member refid="classvideo__player_1a09f01cbfa8401c0af56de6790b51aa5a" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_position</name></member>
+      <member refid="classvideo__player_1abeddbc4eb84ee1fdb3b4bc2b14bf1355" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_timer</name></member>
       <member refid="classvideo__player_1a798ebf466791ea429560b50a31711474" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_videoFile</name></member>
-      <member refid="classvideo__player_1ac72253f042608959cb691b890cc1a36c" prot="private" virt="non-virtual"><scope>video_player</scope><name>player</name></member>
-      <member refid="classvideo__player_1a7ba0d47cbc942d36fab94958852e6fc6" prot="public" virt="non-virtual"><scope>video_player</scope><name>playvideo</name></member>
-      <member refid="classvideo__player_1aa52d0eb07442eb0a5a5ca46381a9b199" prot="public" virt="non-virtual"><scope>video_player</scope><name>stopvideo</name></member>
+      <member refid="classvideo__player_1a4ac136bbf8a2eec429887673a7147e7d" prot="public" virt="non-virtual"><scope>video_player</scope><name>data_read</name></member>
       <member refid="classvideo__player_1a133a33e6defb9375cd3814db2301781a" prot="public" virt="non-virtual"><scope>video_player</scope><name>video_player</name></member>
       <member refid="classvideo__player_1aa867561d456607715c1dda2d93553370" prot="public" virt="non-virtual"><scope>video_player</scope><name>~video_player</name></member>
     </listofallmembers>

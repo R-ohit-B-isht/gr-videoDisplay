@@ -185,6 +185,30 @@ gnuradio-videoDisplay/fast:
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/build
 .PHONY : gnuradio-videoDisplay/fast
 
+moc_playercontrols.o: moc_playercontrols.cpp.o
+.PHONY : moc_playercontrols.o
+
+# target to build an object file
+moc_playercontrols.cpp.o:
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o
+.PHONY : moc_playercontrols.cpp.o
+
+moc_playercontrols.i: moc_playercontrols.cpp.i
+.PHONY : moc_playercontrols.i
+
+# target to preprocess a source file
+moc_playercontrols.cpp.i:
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.i
+.PHONY : moc_playercontrols.cpp.i
+
+moc_playercontrols.s: moc_playercontrols.cpp.s
+.PHONY : moc_playercontrols.s
+
+# target to generate assembly for a file
+moc_playercontrols.cpp.s:
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.s
+.PHONY : moc_playercontrols.cpp.s
+
 moc_video_player.o: moc_video_player.cpp.o
 .PHONY : moc_video_player.o
 
@@ -208,6 +232,30 @@ moc_video_player.s: moc_video_player.cpp.s
 moc_video_player.cpp.s:
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.s
 .PHONY : moc_video_player.cpp.s
+
+playercontrols.o: playercontrols.cc.o
+.PHONY : playercontrols.o
+
+# target to build an object file
+playercontrols.cc.o:
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o
+.PHONY : playercontrols.cc.o
+
+playercontrols.i: playercontrols.cc.i
+.PHONY : playercontrols.i
+
+# target to preprocess a source file
+playercontrols.cc.i:
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.i
+.PHONY : playercontrols.cc.i
+
+playercontrols.s: playercontrols.cc.s
+.PHONY : playercontrols.s
+
+# target to generate assembly for a file
+playercontrols.cc.s:
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.s
+.PHONY : playercontrols.cc.s
 
 video_display_impl.o: video_display_impl.cc.o
 .PHONY : video_display_impl.o
@@ -271,9 +319,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... gnuradio-videoDisplay"
+	@echo "... moc_playercontrols.o"
+	@echo "... moc_playercontrols.i"
+	@echo "... moc_playercontrols.s"
 	@echo "... moc_video_player.o"
 	@echo "... moc_video_player.i"
 	@echo "... moc_video_player.s"
+	@echo "... playercontrols.o"
+	@echo "... playercontrols.i"
+	@echo "... playercontrols.s"
 	@echo "... video_display_impl.o"
 	@echo "... video_display_impl.i"
 	@echo "... video_display_impl.s"

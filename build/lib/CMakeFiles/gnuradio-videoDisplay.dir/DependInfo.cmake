@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_playercontrols.cpp" "lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o" "gcc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o.d"
   "/home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_video_player.cpp" "lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o" "gcc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o.d"
+  "/home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.cc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o" "gcc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o.d"
   "/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_display_impl.cc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o" "gcc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o.d"
   "/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.cc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o" "gcc" "lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o.d"
   )

@@ -59,7 +59,7 @@ $(document).ready(function(){initNavTree('classgr_1_1videoDisplay_1_1video__disp
 </div><!--header-->
 <div class="contents">
 
-<p>&lt;+description of block+&gt;  
+<p>A video display block for displaying video in a Qt widget.  
  <a href="classgr_1_1videoDisplay_1_1video__display.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="video__display_8h_source.html">video_display.h</a>&gt;</code></p>
@@ -84,12 +84,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a372668656f55c8b8ba43b4948750967d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html#a11b4c95adb49a098ad66ba2320d655d9">sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1videoDisplay_1_1video__display.html#a372668656f55c8b8ba43b4948750967d">make</a> (size_t itemsize, const char *filename, QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:a372668656f55c8b8ba43b4948750967d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shared_ptr to a new instance of <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html" title="&lt;+description of block+&gt;">videoDisplay::video_display</a>.  <a href="classgr_1_1videoDisplay_1_1video__display.html#a372668656f55c8b8ba43b4948750967d">More...</a><br /></td></tr>
-<tr class="separator:a372668656f55c8b8ba43b4948750967d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab0a3c987e462e797eedb858aa21bc4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html#a11b4c95adb49a098ad66ba2320d655d9">sptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgr_1_1videoDisplay_1_1video__display.html#aeab0a3c987e462e797eedb858aa21bc4">make</a> (size_t itemsize, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:aeab0a3c987e462e797eedb858aa21bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a video display block.  <a href="classgr_1_1videoDisplay_1_1video__display.html#aeab0a3c987e462e797eedb858aa21bc4">More...</a><br /></td></tr>
+<tr class="separator:aeab0a3c987e462e797eedb858aa21bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt;+description of block+&gt; </p>
+<div class="textblock"><p>A video display block for displaying video in a Qt widget. </p>
+<p>This block displays video in a Qt widget. The widget is created in the constructor and can be accessed with the <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html#a0afa0eb8b6c050d80f155ba2547755cf">qwidget()</a> method. The widget is a QWidget and can be used as a child widget in other Qt widgets. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a11b4c95adb49a098ad66ba2320d655d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11b4c95adb49a098ad66ba2320d655d9">&#9670;&nbsp;</a></span>sptr</h2>
@@ -133,8 +134,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a372668656f55c8b8ba43b4948750967d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a372668656f55c8b8ba43b4948750967d">&#9670;&nbsp;</a></span>make()</h2>
+<a id="aeab0a3c987e462e797eedb858aa21bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab0a3c987e462e797eedb858aa21bc4">&#9670;&nbsp;</a></span>make()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,12 +148,6 @@ Static Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>itemsize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -173,8 +168,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return a shared_ptr to a new instance of <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html" title="&lt;+description of block+&gt;">videoDisplay::video_display</a>. </p>
-<p>To avoid accidental use of raw pointers, <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html" title="&lt;+description of block+&gt;">videoDisplay::video_display</a>'s constructor is in a private implementation class. <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html#a372668656f55c8b8ba43b4948750967d" title="Return a shared_ptr to a new instance of videoDisplay::video_display.">videoDisplay::video_display::make</a> is the public interface for creating new instances. </p>
+<p>Build a video display block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">itemsize</td><td>The size of the items in the video stream. </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent widget.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared_ptr to a new <a class="el" href="classgr_1_1videoDisplay_1_1video__display.html" title="A video display block for displaying video in a Qt widget.">video_display</a> block. </dd></dl>
 
 </div>
 </div>

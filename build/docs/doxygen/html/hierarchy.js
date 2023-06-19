@@ -4,6 +4,7 @@ var hierarchy =
       [ "video_player_signal", "classvideo__player__signal.html", null ]
     ] ],
     [ "QWidget", null, [
+      [ "PlayerControls", "classPlayerControls.html", null ],
       [ "video_player", "classvideo__player.html", null ]
     ] ],
     [ "gr::sync_block", null, [

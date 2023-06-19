@@ -73,10 +73,14 @@ lib/moc_video_player.cpp: /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_video_player.cpp"
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/moc @/home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_video_player.cpp_parameters
 
+lib/moc_playercontrols.cpp: /home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating moc_playercontrols.cpp"
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/moc @/home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_playercontrols.cpp_parameters
+
 lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/flags.make
 lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o: lib/moc_video_player.cpp
 lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o"
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o -MF CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o.d -o CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o -c /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_video_player.cpp
 
 lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.i: cmake_force
@@ -87,10 +91,24 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.s"
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_video_player.cpp -o CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.s
 
+lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/flags.make
+lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o: lib/moc_playercontrols.cpp
+lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o"
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o -MF CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o.d -o CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o -c /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_playercontrols.cpp
+
+lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.i"
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_playercontrols.cpp > CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.i
+
+lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.s"
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/moc_playercontrols.cpp -o CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.s
+
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/flags.make
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.cc
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o"
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o -MF CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o.d -o CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o -c /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.cc
 
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.i: cmake_force
@@ -104,7 +122,7 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.s: cmake_force
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/flags.make
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o: /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_display_impl.cc
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o"
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o -MF CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o.d -o CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o -c /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_display_impl.cc
 
 lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.i: cmake_force
@@ -115,18 +133,36 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.s"
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_display_impl.cc -o CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.s
 
+lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/flags.make
+lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o: /home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.cc
+lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o: lib/CMakeFiles/gnuradio-videoDisplay.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o"
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o -MF CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o.d -o CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o -c /home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.cc
+
+lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.i"
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.cc > CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.i
+
+lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.s"
+	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && /home/rohit/radioconda/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohit/Videos/video/gr/gr-videoDisplay/lib/playercontrols.cc -o CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.s
+
 # Object files for target gnuradio-videoDisplay
 gnuradio__videoDisplay_OBJECTS = \
 "CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o" \
+"CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o" \
 "CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o" \
-"CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o"
+"CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o" \
+"CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o"
 
 # External object files for target gnuradio-videoDisplay
 gnuradio__videoDisplay_EXTERNAL_OBJECTS =
 
 lib/libgnuradio-videoDisplay.so.1.0.0.0: lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_video_player.cpp.o
+lib/libgnuradio-videoDisplay.so.1.0.0.0: lib/CMakeFiles/gnuradio-videoDisplay.dir/moc_playercontrols.cpp.o
 lib/libgnuradio-videoDisplay.so.1.0.0.0: lib/CMakeFiles/gnuradio-videoDisplay.dir/video_player.cc.o
 lib/libgnuradio-videoDisplay.so.1.0.0.0: lib/CMakeFiles/gnuradio-videoDisplay.dir/video_display_impl.cc.o
+lib/libgnuradio-videoDisplay.so.1.0.0.0: lib/CMakeFiles/gnuradio-videoDisplay.dir/playercontrols.cc.o
 lib/libgnuradio-videoDisplay.so.1.0.0.0: lib/CMakeFiles/gnuradio-videoDisplay.dir/build.make
 lib/libgnuradio-videoDisplay.so.1.0.0.0: /home/rohit/radioconda/lib/libgnuradio-runtime.so.3.10.6.0
 lib/libgnuradio-videoDisplay.so.1.0.0.0: /home/rohit/radioconda/lib/libQt5MultimediaWidgets.so.5.15.8
@@ -144,7 +180,7 @@ lib/libgnuradio-videoDisplay.so.1.0.0.0: /home/rohit/radioconda/lib/libQt5Gui.so
 lib/libgnuradio-videoDisplay.so.1.0.0.0: /home/rohit/radioconda/lib/libQt5Core.so.5.15.8
 lib/libgnuradio-videoDisplay.so.1.0.0.0: /home/rohit/radioconda/lib/libpython3.10.so
 lib/libgnuradio-videoDisplay.so.1.0.0.0: lib/CMakeFiles/gnuradio-videoDisplay.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libgnuradio-videoDisplay.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rohit/Videos/video/gr/gr-videoDisplay/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libgnuradio-videoDisplay.so"
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-videoDisplay.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && $(CMAKE_COMMAND) -E cmake_symlink_library libgnuradio-videoDisplay.so.1.0.0.0 libgnuradio-videoDisplay.so.1.0.0 libgnuradio-videoDisplay.so
 
@@ -162,6 +198,7 @@ lib/CMakeFiles/gnuradio-videoDisplay.dir/clean:
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/gnuradio-videoDisplay.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/gnuradio-videoDisplay.dir/clean
 
+lib/CMakeFiles/gnuradio-videoDisplay.dir/depend: lib/moc_playercontrols.cpp
 lib/CMakeFiles/gnuradio-videoDisplay.dir/depend: lib/moc_video_player.cpp
 	cd /home/rohit/Videos/video/gr/gr-videoDisplay/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rohit/Videos/video/gr/gr-videoDisplay /home/rohit/Videos/video/gr/gr-videoDisplay/lib /home/rohit/Videos/video/gr/gr-videoDisplay/build /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib /home/rohit/Videos/video/gr/gr-videoDisplay/build/lib/CMakeFiles/gnuradio-videoDisplay.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/CMakeFiles/gnuradio-videoDisplay.dir/depend

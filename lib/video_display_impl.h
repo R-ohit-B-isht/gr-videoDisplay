@@ -1,6 +1,8 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2023 gr-videoDisplay author.
+ * Copyright 2023 Free Software Foundation, Inc.
+ *
+ * This file is part of GNU Radio
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -12,8 +14,6 @@
 #include <gnuradio/videoDisplay/video_display.h>
 #include <QtCore/QTemporaryFile>
 #include <qapplication.h>
-#include <QByteArray>
-#include <QDataStream>
 #include <cstdio>
 #include <cstdlib>
 #include <fstream>
@@ -31,9 +31,10 @@ private:
     video_player* d_video_player;
     QWidget* d_parent;
     video_player_signal* d_video_player_signal;
+    QTemporaryFile d_temp_file;
 
 public:
-    video_display_impl(size_t itemsize, const char* filename, QWidget* parent = nullptr);
+    video_display_impl(size_t itemsize, QWidget* parent = nullptr);
     ~video_display_impl();
 
     void exec_() override;

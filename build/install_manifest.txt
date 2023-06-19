@@ -16,6 +16,7 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/group__block.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/xml.xsd
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/docs_2doxygen_2pydoc__macros_8h.xml
+/home/rohit/radioconda/share/doc/gr-videoDisplay/xml/classPlayerControls.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/namespacegr.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/dir_0302927f9c9184deecb97aa89451c37c.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/index.xsd
@@ -46,6 +47,7 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/dir_902d6fe55786be073ae6681293cdb979.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/dir_53e997c3cc6c18f99900b30eb873f5a0.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/compound.xsd
+/home/rohit/radioconda/share/doc/gr-videoDisplay/xml/playercontrols_8h.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/dir_b4b6f8d3b348fc2f711254b20d1724c9.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/video__display__impl_8h.xml
 /home/rohit/radioconda/share/doc/gr-videoDisplay/xml/build_2test__modules_2gnuradio_2videoDisplay_2bindings_2docstrings_2video__display__pydoc__template_8h.xml
@@ -66,8 +68,8 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/doxygen.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/inherit_graph_1.map
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/video__display_8h__incl.map
-/home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_000009_000000.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/functions_type.html
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/classPlayerControls__inherit__graph.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/sync_on.png
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/docs_2doxygen_2pydoc__macros_8h.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/navtree.js
@@ -84,6 +86,7 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/python_2videoDisplay_2bindings_2docstrings_2video__display__pydoc__template_8h_source.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classvideo__player__signal__inherit__graph.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/video__player_8h_source.html
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/classPlayerControls.js
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/build_2python_2videoDisplay_2bindings_2pydoc__macros_8h.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/inherit_graph_0.map
@@ -110,9 +113,11 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_902d6fe55786be073ae6681293cdb979.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/functions_vars.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/graph_legend.svg
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h__incl.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/build_2python_2videoDisplay_2bindings_2pydoc__macros_8h_source.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/globals.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_97aefd0d527b934f1d99a682da8fe6a9.html
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h__dep__incl.map
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_53e997c3cc6c18f99900b30eb873f5a0.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classvideo__player__inherit__graph.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_d5646a4d2acea6cd94665cfd9ba3943c.html
@@ -123,6 +128,7 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/video__display_8h__incl.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/tab_s.png
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/nav_g.png
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h__dep__incl.md5
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classvideo__player.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/api_8h__incl.md5
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classvideo__player__signal__inherit__graph.md5
@@ -132,8 +138,11 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/video__player_8h.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/folderopen.png
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/python_2videoDisplay_2bindings_2docstrings_2video__display__pydoc__template_8h__incl.svg
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/classPlayerControls-members.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/build_2python_2videoDisplay_2bindings_2pydoc__macros_8h.js
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h_source.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/inherits.html
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/classPlayerControls.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_82ceec6814c862f581c643b0c8b4a455.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classes.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classgr_1_1videoDisplay_1_1video__display__impl__inherit__graph.map
@@ -142,6 +151,7 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/navtreeindex0.js
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/tab_h.png
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/inherit_graph_0.svg
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/tab_b.png
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classvideo__player__inherit__graph.md5
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/video__display_8h__dep__incl.md5
@@ -168,14 +178,19 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/namespacegr_1_1videoDisplay.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_3c0f07b88e12b0dafdca5442dfe85679.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/annotated.html
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h__incl.map
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_49e56c817e5e54854c35e136979f97ca.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/bc_s.png
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_000006_000000.html
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/classPlayerControls__inherit__graph.md5
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/navtree.css
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/resize.js
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h__incl.md5
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/video__player_8h__incl.md5
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classgr_1_1videoDisplay_1_1video__display__inherit__graph.md5
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classvideo__player__signal-members.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/api_8h__dep__incl.svg
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/classPlayerControls__inherit__graph.map
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classvideo__player__signal.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/api_8h__incl.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classgr_1_1videoDisplay_1_1video__display__impl.js
@@ -205,6 +220,7 @@
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classgr_1_1videoDisplay_1_1video__display-members.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/annotated_dup.js
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/dir_0302927f9c9184deecb97aa89451c37c.html
+/home/rohit/radioconda/share/doc/gr-videoDisplay/html/playercontrols_8h__dep__incl.svg
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/functions_func.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/hierarchy.html
 /home/rohit/radioconda/share/doc/gr-videoDisplay/html/classgr_1_1videoDisplay_1_1video__display.js
