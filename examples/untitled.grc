@@ -130,7 +130,6 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    file: /home/rohit/Videos/trial/trial.mp4
     gui_hint: ''
     type: byte
     vlen: '1'
