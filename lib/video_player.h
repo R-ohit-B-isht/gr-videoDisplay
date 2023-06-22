@@ -39,6 +39,7 @@ private:
     QMediaPlayer* d_player;
     QString d_videoFile;
     bool d_downloading = true;
+    bool d_started = false;
     qint64 d_position = 0;
     QTimer d_timer;
 };

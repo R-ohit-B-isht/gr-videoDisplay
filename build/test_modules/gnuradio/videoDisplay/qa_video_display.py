@@ -7,6 +7,9 @@
 #
 
 from gnuradio import gr, gr_unittest
+from PyQt5 import Qt
+import sip
+
 # from gnuradio import blocks
 try:
   from gnuradio.videoDisplay import video_display
@@ -26,7 +29,9 @@ class qa_video_display(gr_unittest.TestCase):
         self.tb = None
 
     def test_instance(self):
-        instance = video_display(gr.sizeof_gr_complex)
+        itemsize = gr.sizeof_int  
+        parent = None 
+        instance = video_display(itemsize ,parent)
         b = sip.wrapinstance(instance.qwidget(),Qt.QWidget)
 
     def test_001_descriptive_test_name(self):

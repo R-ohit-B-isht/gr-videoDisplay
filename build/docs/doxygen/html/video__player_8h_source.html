@@ -94,31 +94,32 @@ $(document).ready(function(){initNavTree('video__player_8h_source.html',''); ini
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QMediaPlayer* d_player;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QString d_videoFile;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> d_downloading = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    qint64 d_position = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QTimer d_timer;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// VIDEOPLAYER_HH</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#ifndef VIDEOSIGNAL_HH</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="video__player_8h.html#a5d54cbc6f2cb087d8e0524addb7c1271">   49</a></span>&#160;<span class="preprocessor">#define VIDEOSIGNAL_HH</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvideo__player__signal.html">video_player_signal</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html#ac752d0cfbb2c1cf0e26c65816c20770f">   56</a></span>&#160;    <a class="code" href="classvideo__player__signal.html#ac752d0cfbb2c1cf0e26c65816c20770f">video_player_signal</a>() {}</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html#a39bbb0f615bc3f55102f27223314ae7c">   57</a></span>&#160;    <a class="code" href="classvideo__player__signal.html#a39bbb0f615bc3f55102f27223314ae7c">~video_player_signal</a>() {}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;signals:</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html#aee9f5cee36fcbc312dee45ffe7889987">   60</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classvideo__player__signal.html#aee9f5cee36fcbc312dee45ffe7889987">data_send</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// VIDEOSIGNAL_HH</span></div>
-<div class="ttc" id="aclassvideo__player__signal_html"><div class="ttname"><a href="classvideo__player__signal.html">video_player_signal</a></div><div class="ttdef"><b>Definition:</b> video_player.h:52</div></div>
-<div class="ttc" id="aclassvideo__player__signal_html_a39bbb0f615bc3f55102f27223314ae7c"><div class="ttname"><a href="classvideo__player__signal.html#a39bbb0f615bc3f55102f27223314ae7c">video_player_signal::~video_player_signal</a></div><div class="ttdeci">~video_player_signal()</div><div class="ttdef"><b>Definition:</b> video_player.h:57</div></div>
-<div class="ttc" id="aclassvideo__player__signal_html_ac752d0cfbb2c1cf0e26c65816c20770f"><div class="ttname"><a href="classvideo__player__signal.html#ac752d0cfbb2c1cf0e26c65816c20770f">video_player_signal::video_player_signal</a></div><div class="ttdeci">video_player_signal()</div><div class="ttdef"><b>Definition:</b> video_player.h:56</div></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> d_started = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    qint64 d_position = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QTimer d_timer;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// VIDEOPLAYER_HH</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifndef VIDEOSIGNAL_HH</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="video__player_8h.html#a5d54cbc6f2cb087d8e0524addb7c1271">   50</a></span>&#160;<span class="preprocessor">#define VIDEOSIGNAL_HH</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvideo__player__signal.html">video_player_signal</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html#ac752d0cfbb2c1cf0e26c65816c20770f">   57</a></span>&#160;    <a class="code" href="classvideo__player__signal.html#ac752d0cfbb2c1cf0e26c65816c20770f">video_player_signal</a>() {}</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html#a39bbb0f615bc3f55102f27223314ae7c">   58</a></span>&#160;    <a class="code" href="classvideo__player__signal.html#a39bbb0f615bc3f55102f27223314ae7c">~video_player_signal</a>() {}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;signals:</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classvideo__player__signal.html#aee9f5cee36fcbc312dee45ffe7889987">   61</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classvideo__player__signal.html#aee9f5cee36fcbc312dee45ffe7889987">data_send</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// VIDEOSIGNAL_HH</span></div>
+<div class="ttc" id="aclassvideo__player__signal_html"><div class="ttname"><a href="classvideo__player__signal.html">video_player_signal</a></div><div class="ttdef"><b>Definition:</b> video_player.h:53</div></div>
+<div class="ttc" id="aclassvideo__player__signal_html_a39bbb0f615bc3f55102f27223314ae7c"><div class="ttname"><a href="classvideo__player__signal.html#a39bbb0f615bc3f55102f27223314ae7c">video_player_signal::~video_player_signal</a></div><div class="ttdeci">~video_player_signal()</div><div class="ttdef"><b>Definition:</b> video_player.h:58</div></div>
+<div class="ttc" id="aclassvideo__player__signal_html_ac752d0cfbb2c1cf0e26c65816c20770f"><div class="ttname"><a href="classvideo__player__signal.html#ac752d0cfbb2c1cf0e26c65816c20770f">video_player_signal::video_player_signal</a></div><div class="ttdeci">video_player_signal()</div><div class="ttdef"><b>Definition:</b> video_player.h:57</div></div>
 <div class="ttc" id="aclassvideo__player__signal_html_aee9f5cee36fcbc312dee45ffe7889987"><div class="ttname"><a href="classvideo__player__signal.html#aee9f5cee36fcbc312dee45ffe7889987">video_player_signal::data_send</a></div><div class="ttdeci">void data_send()</div></div>
 <div class="ttc" id="aclassvideo__player_html"><div class="ttname"><a href="classvideo__player.html">video_player</a></div><div class="ttdef"><b>Definition:</b> video_player.h:28</div></div>
 <div class="ttc" id="aclassvideo__player_html_a133a33e6defb9375cd3814db2301781a"><div class="ttname"><a href="classvideo__player.html#a133a33e6defb9375cd3814db2301781a">video_player::video_player</a></div><div class="ttdeci">video_player(QWidget *parent=nullptr, QString videoFile=&quot;&quot;)</div></div>

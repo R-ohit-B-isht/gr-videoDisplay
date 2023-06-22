@@ -87,16 +87,16 @@ video_player::video_player(QWidget* parent, QString videoFile)
 
     connect(timeSlider, &QSlider::sliderMoved, [=](int position) {
         d_position = position;
-        d_player->setPosition(d_position);
+        d_player->setPosition(position);
     });
 
     connect(d_player, &QMediaPlayer::positionChanged, [=](qint64 position) {
         timeSlider->setValue(position);
-        d_position = position;
+
         QString playedTime = QTime(0, 0).addMSecs(position).toString("mm:ss");
         playedTimeLabel->setText(playedTime);
-        if (d_position >= d_player->duration()) {
-            emit d_player->durationChanged(d_position);
+        if (position >= d_player->duration()) {
+            emit d_player->durationChanged(position);
         }
     });
 
@@ -109,24 +109,21 @@ video_player::video_player(QWidget* parent, QString videoFile)
             &QMediaPlayer::mediaStatusChanged,
             [this](QMediaPlayer::MediaStatus status) {
                 if (status == QMediaPlayer::LoadedMedia) {
-                    d_player->setPosition(d_position);
+                    qInfo() << "LoadedMedia " << d_position;
+                    // d_player->setPosition(d_position);
                     d_player->play();
                 }
                 if (status == QMediaPlayer::EndOfMedia && d_downloading) {
+                    qInfo() << "Initial d_position : " << d_position;
                     qint64 currentPosition = d_player->position();
-                    qint64 duration = d_player->duration();
-                    if (currentPosition <= duration) {
-                        currentPosition = duration;
-                    }
+                    qInfo() << "currentPosition : " << currentPosition;
                     if (d_position <= currentPosition) {
                         d_position = currentPosition;
                     }
                     d_player->setMedia(QUrl::fromLocalFile(d_videoFile));
-                    d_player->setPosition(d_position);
-                    d_player->play();
-
                 } else if (status == QMediaPlayer::EndOfMedia && !d_downloading) {
                     d_position = 0;
+                    d_player->setMedia(QUrl::fromLocalFile(d_videoFile));
                     d_player->setPosition(d_position);
                     d_player->stop();
                 }
@@ -143,4 +140,8 @@ void video_player::data_read()
 {
     d_downloading = true;
     d_timer.start();
+    if (!d_started) {
+        d_player->play();
+        d_started = true;
+    }
 }

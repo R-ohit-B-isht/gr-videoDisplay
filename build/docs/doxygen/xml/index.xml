@@ -58,6 +58,7 @@
     <member refid="classvideo__player_1a25b54ad6d2e1727c0479ffc6dbbc1a78" kind="variable"><name>d_player</name></member>
     <member refid="classvideo__player_1a798ebf466791ea429560b50a31711474" kind="variable"><name>d_videoFile</name></member>
     <member refid="classvideo__player_1a62df708c843a7afeace656c4dd3d2286" kind="variable"><name>d_downloading</name></member>
+    <member refid="classvideo__player_1a5b83f32a7a7bd511820506d5c16730e6" kind="variable"><name>d_started</name></member>
     <member refid="classvideo__player_1a09f01cbfa8401c0af56de6790b51aa5a" kind="variable"><name>d_position</name></member>
     <member refid="classvideo__player_1abeddbc4eb84ee1fdb3b4bc2b14bf1355" kind="variable"><name>d_timer</name></member>
     <member refid="classvideo__player_1a133a33e6defb9375cd3814db2301781a" kind="function"><name>video_player</name></member>

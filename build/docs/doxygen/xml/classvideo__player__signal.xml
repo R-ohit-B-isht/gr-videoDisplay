@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="56" column="5" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="56" bodyend="56"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="57" column="5" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="57" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classvideo__player__signal_1a39bbb0f615bc3f55102f27223314ae7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="57" column="5" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="57" bodyend="57"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="58" column="5" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="58" bodyend="58"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="signal">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="60" column="10"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="61" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -73,7 +73,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="51" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="52" bodyend="61"/>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="52" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="53" bodyend="62"/>
     <listofallmembers>
       <member refid="classvideo__player__signal_1aee9f5cee36fcbc312dee45ffe7889987" prot="public" virt="non-virtual"><scope>video_player_signal</scope><name>data_send</name></member>
       <member refid="classvideo__player__signal_1ac752d0cfbb2c1cf0e26c65816c20770f" prot="public" virt="non-virtual"><scope>video_player_signal</scope><name>video_player_signal</name></member>

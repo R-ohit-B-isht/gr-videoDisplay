@@ -45,6 +45,20 @@
         </inbodydescription>
         <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="41" column="10" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="41" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classvideo__player_1a5b83f32a7a7bd511820506d5c16730e6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool video_player::d_started</definition>
+        <argsstring></argsstring>
+        <name>d_started</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="42" column="10" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classvideo__player_1a09f01cbfa8401c0af56de6790b51aa5a" prot="private" static="no" mutable="no">
         <type>qint64</type>
         <definition>qint64 video_player::d_position</definition>
@@ -57,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="42" column="12" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="43" column="12" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvideo__player_1abeddbc4eb84ee1fdb3b4bc2b14bf1355" prot="private" static="no" mutable="no">
         <type>QTimer</type>
@@ -70,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="43" column="12" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="44" column="12" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -152,11 +166,12 @@
         <label>QWidget</label>
       </node>
     </collaborationgraph>
-    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="27" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="28" bodyend="44"/>
+    <location file="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" line="27" column="1" bodyfile="/home/rohit/Videos/video/gr/gr-videoDisplay/lib/video_player.h" bodystart="28" bodyend="45"/>
     <listofallmembers>
       <member refid="classvideo__player_1a62df708c843a7afeace656c4dd3d2286" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_downloading</name></member>
       <member refid="classvideo__player_1a25b54ad6d2e1727c0479ffc6dbbc1a78" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_player</name></member>
       <member refid="classvideo__player_1a09f01cbfa8401c0af56de6790b51aa5a" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_position</name></member>
+      <member refid="classvideo__player_1a5b83f32a7a7bd511820506d5c16730e6" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_started</name></member>
       <member refid="classvideo__player_1abeddbc4eb84ee1fdb3b4bc2b14bf1355" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_timer</name></member>
       <member refid="classvideo__player_1a798ebf466791ea429560b50a31711474" prot="private" virt="non-virtual"><scope>video_player</scope><name>d_videoFile</name></member>
       <member refid="classvideo__player_1a4ac136bbf8a2eec429887673a7147e7d" prot="public" virt="non-virtual"><scope>video_player</scope><name>data_read</name></member>

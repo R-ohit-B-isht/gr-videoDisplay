@@ -4,7 +4,8 @@
         "fstream": "cpp",
         "qvboxlayout": "cpp",
         "*.tcc": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "chrono": "cpp"
     },
     "editor.formatOnSave": true
 }
